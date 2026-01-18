@@ -769,6 +769,73 @@
                 display: none;
             }
         }
+        /* Hero Layout */
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px 0;
+}
+
+/* Photo Styling */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.author-photo {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    border: 8px solid rgba(65, 84, 241, 0.1); /* Subtle primary color border */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.author-photo:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+}
+
+/* Text Content Styling */
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    color: var(--primary); /* Uses your primary blue/red */
+}
+
+/* Responsive for Mobile */
+@media (max-width: 992px) {
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .hero-image {
+        justify-content: center;
+    }
+    
+    .author-photo {
+        width: 250px;
+        height: 250px;
+    }
+}
     </style>
 </head>
 
@@ -797,17 +864,22 @@
         </ul>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>CREATIVE<br>DEVELOPER</h1>
-            <p>Crafting digital experiences that blend innovation with elegance. Transforming ideas into reality through
-                code and design.</p>
-            <div class="cta-buttons">
-                <button class="cta-button cta-primary">View Projects</button>
-                <button class="cta-button cta-secondary">Get in Touch</button>
+        <section id="home" class="hero">
+            <div class="container hero-wrapper">
+                <div class="hero-image">
+                    <img src="images/author.jpeg" alt="Author Name" class="author-photo">
+                </div>
+                
+                <div class="hero-text">
+                    <h1>MIZANUR<br><span>ISLAM</span></h1>
+                    <p>Crafting digital experiences that blend innovation with elegance. Transforming ideas into reality through code and design.</p>
+                    <div class="cta-buttons">
+                        <button class="cta-button cta-primary">View Projects</button>
+                        <button class="cta-button cta-secondary">Get in Touch</button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <section id="projects">
         <div class="container">
