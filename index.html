@@ -895,12 +895,19 @@
         </div>
     </section>
 
-<form action="mailto:imizanur13@gmail.com" method="POST" enctype="text/plain">
-    <input type="text" name="Name" placeholder="Your Name" required>
-    <input type="email" name="Email" placeholder="Your Email" required>
-    <textarea name="Message" placeholder="Tell me about your project" required></textarea>
-    <button type="submit">Send Message</button>
+<form class="contact-form" action="https://mizanurislam.infinityfree.me/send-mail.php" method="POST">
+    <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <textarea name="message" placeholder="Tell me about your project" required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Send Message</button>
 </form>
+
 
 
     <script>
